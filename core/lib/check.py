@@ -4,10 +4,9 @@ By @python3lover (GitHub and GitLab)
 '''
 from hashlib import sha512
 class check():
-  def __init__(self,path,command):
+  def __init__(self,path):
     self.path = path
     self.file = None
-    self.command = command
     self.oldhash = None
   def check(self):
     self.file = open(self.path,'r')
