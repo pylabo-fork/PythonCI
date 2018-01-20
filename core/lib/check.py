@@ -10,7 +10,7 @@ class check():
     self.oldhash = None
   def check(self):
     self.file = open(self.path,'r')
-    if hashlib.sha224(self.file.read()).hexdigest() != self.oldhash:
+    if hashlib.sha512(self.file.read()).hexdigest() != self.oldhash:
       self.file.close()
       return True
     else:
