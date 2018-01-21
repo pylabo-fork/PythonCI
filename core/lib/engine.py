@@ -18,7 +18,11 @@ class engine():
       if self.check.check():
         stdout,stderr = Popen(self.command,stdout=STDOUT,stderr=STDERR).communicate()
 <<<<<<< HEAD
+<<<<<<< HEAD
       wait(self.delay)
+=======
+      wait(self.delay)
+>>>>>>> 0104f07452b45f511b5ac6c49f9c0cdeee6dc592
 =======
       wait(self.delay)
 >>>>>>> 0104f07452b45f511b5ac6c49f9c0cdeee6dc592
