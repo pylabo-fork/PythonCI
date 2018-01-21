@@ -12,6 +12,7 @@ class check():
     self.file = open(self.path,'r')
     if hashlib.sha512(self.file.read()).hexdigest() != self.oldhash:
       self.file.close()
+      self.oldhash = hashlib.sha512(self.file.read()).hexdigest()
       return True
     else:
       self.file.close()
