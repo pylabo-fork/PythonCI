@@ -2,13 +2,19 @@
 /core/lib/engine.py
 By @python3lover (GitHub and GitLab)
 '''
+from check import *
+from subprocess import Popen, STDOUT, STDERR
+from time import wait
 class engine():
-  def __init__(self,configpath,path,command):
+  def __init__(self,configpath,outputpath,delay=10000):
     self.configpath = configpath
-    self.path = path
-    self.command = command
+    self.outputpath = outputpath
     self.quit = False
+    self.check = check(path)
+    self.delay = delay/1000
   def engine(self):
     print('PythonCI')
     while not self.quit:
-      pass#Not done
+      if self.check.check():
+        stdout,stderr = Popen(self.command,stdout=STDOUT,stderr=STDERR).communicate()
+      wait(self.delay)
