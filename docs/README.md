@@ -4,7 +4,7 @@
 
 ## About
 
-## Project Exaple
+## Project Examples
 
 ## Documentation
 
